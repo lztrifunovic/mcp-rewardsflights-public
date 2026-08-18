@@ -1,0 +1,31 @@
+{
+	"name": "rewards-flight-mcp",
+	"version": "0.2.0",
+	"private": true,
+	"engines": {
+		"node": ">=24.11.0"
+	},
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"format": "biome format --write",
+		"lint": "biome check src package.json wrangler.jsonc biome.json",
+		"lint:fix": "biome lint --fix",
+		"start": "wrangler dev",
+		"test": "vitest run",
+		"cf-typegen": "wrangler types",
+		"type-check": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.30.0",
+		"agents": "^0.21.0",
+		"zod": "^4.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.4",
+		"@types/node": "^24.13.3",
+		"typescript": "^5.8.3",
+		"vitest": "^4.1.11",
+		"wrangler": "^4.124.0"
+	}
+}
